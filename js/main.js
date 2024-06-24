@@ -196,29 +196,46 @@
    * slide products
    */
 
-  // Inisialisasi Glide untuk slideshow kedua
   new Glide('.glide1', {
     type: 'carousel',
     perView: 1,
     focusAt: 'center',
+    autoplay: 5000, // 10 detik
     hoverpause: true,
   }).mount();
 
-  // Inisialisasi Glide untuk slideshow kedua
   new Glide('.glide2', {
     type: 'carousel',
     perView: 1,
     focusAt: 'center',
+    autoplay: 5000, // 10 detik
     hoverpause: true,
   }).mount();
 
-  // Inisialisasi Glide untuk slideshow ketiga
   new Glide('.glide3', {
     type: 'carousel',
     perView: 1,
     focusAt: 'center',
+    autoplay: 5000, // 10 detik
     hoverpause: true,
   }).mount();
+
+  /**
+   * slide vertical and horizontal
+   */
+  var swiper = new Swiper(".mySwiper", {
+    direction: "vertical",
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    mousewheel: true
+  });
+
+  /**
+ * maps
+ */
+
 
   /**
    * Navmenu Scrollspy
