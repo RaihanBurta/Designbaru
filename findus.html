@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>PT KMDS tbk - PT KurniaMitra Duta Sentosa TBK</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="PT" content="KMDS, Kurnia Mitra Duta Sentosa" />
+  <meta name="keywords" content="Monin Syrup, Monin, Sirup Monin, Milklab, Susu Kopi, Susu Almond, Almond Milk" />
+
+  <!-- Favicons -->
+  <link href="img/Logo title.png" rel="icon">
+  <link href="img/Logo title.png" rel="apple-touch-icon">
+
+  <!-- link style -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.awesome-markers/2.0.4/leaflet.awesome-markers.css">
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.awesome-markers/2.0.4/leaflet.awesome-markers.min.js"></script>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <script src="https://kit.fontawesome.com/ac47935029.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@6.11.5/dist/ol.css" type="text/css">
+  <script src="https://cdn.jsdelivr.net/npm/ol@6.11.5/dist/ol.js"></script>
+
+  <!-- Vendor CSS Files -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="vendor/aos/aos.css" rel="stylesheet">
+  <link href="vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="css/main.css" rel="stylesheet">
+</head>
+
+<body class="service-details-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <img src="img/Logo title.png" alt="">
+        <h1 class="sitename">KMDS</h1>
+      </a>
+
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="" class="">Product</a></li>
+          <li><a href="">News</a></li>
+          <li class="dropdown"><a href="#"><span>Investor Relation</span> <i
+                class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#">Annual Report </a></li>
+              <li><a href="#">Company’s Prospectus</a></li>
+              <li><a href="#">Financial Report</a></li>
+              <li><a href="#">Company’s Disclosure</a></li>
+              <li><a href="#">Press Release</a></li>
+              <li><a href="#">General Meeting Shareholders</a></li>
+              <li><a href="#">CSR Information</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#"><span>FAQ</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="faq_monin.html">Monin </a></li>
+              <li><a href="faq_lavazza.html">Lavazza</a></li>
+              <li><a href="faq_milklab.html">Milklab</a></li>
+              <li><a href="faq_bobaking.html">Bobaking</a></li>
+              <li><a href="faq_santino.html">Santino</a></li>
+              <li><a href="faq_jtc.html">JTC</a></li>
+              <li><a href="faq_strawme.html">Strawme</a></li>
+              <li><a href="faq_ipilot.html">I Pilot</a></li>
+            </ul>
+          <li><a href="findus.html">Find Us</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Section Contact -->
+    <section id="contact" class="contact section">
+
+      <div class="container section-title" data-aos="fade-up" style="margin-bottom: 10px;">
+        <h2>Retail & Subdistributors</h2>
+        <p></p>
+      </div><!-- End Section Title -->
+      <div id="map" class="map" style="margin-top: 10px;"></div>
+
+
+
+    </section><!-- End Contact Section -->
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var map = L.map('map', {
+          center: [-2.5, 117], // Center map on Indonesia
+          zoom: 4,
+          zoomControl: false // Disable zoom control
+        });
+
+        // Custom gold icon for all markers
+        var goldIcon = L.icon({
+          iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-gold.png', // URL of the gold icon
+          iconSize: [25, 41], // size of the icon
+          iconAnchor: [12, 41], // point of the icon which will correspond to marker's location
+          popupAnchor: [1, -34] // point from which the popup should open relative to the iconAnchor
+        });
+
+        // Array of markers with location coordinates and popup content
+        var markers = [
+          //RETAIL
+          {
+            coords: [-6.24325, 106.64064],
+            popup: '<div class="popup-pt-name">Retail Center T8</div>Kawasan Pergudangan T8 Jl. Tecno 8 No.16 Alam Sutra, Serpong, Pakulonan, Serpong Utara, South Tangerang City, Banten 15325<br>Email: info@kmds.co.id<br>Telp: (021) 2235 3388'
+          },
+          {
+            coords: [-6.05414, 106.74364],
+            popup: '<div class="popup-pt-name">Retail PIK</div>Rukan Golf Island Blok E No.118 , Ruko Theme Park, Pantai Indah Kapuk St No.2, Kamal Muara, 14460<br>Telp: 087700068222'
+          },
+          {
+            coords: [-6.17100, 106.81134],
+            popup: '<div class="popup-pt-name">Retail Cideng</div>Wisma Abadi, Jl. Kyai Caringin No.29 - 31 Ground Floor Blok B 2, RT.9/RW.6, Petojo Sel, Kecamatan Gambir, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta 10160<br>Telp: 087700068222'
+          },
+          {
+            coords: [-7.24256, 112.73981],
+            popup: '<div class="popup-pt-name">Retail Surabaya</div>Jl. Taman Apsari No.11, Embong Kaliasin, Kec. Genteng, Surabaya, Jawa Timur 60271<br>Telp: 087700068222'
+          },
+
+          //SUBDISTRIBUTION
+          {
+            coords: [-6.16418, 106.72610],
+            popup: '<div class="popup-pt-name">PT GALIH ANUGERAH RASA UTAMA</div>Jl. Dharma Raya, Plaza de Lumina A17, RT.3/RW.7, Duri Kosambi, Kecamatan Cengkareng, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11750<br>Email: garutama.po@gmail.com<br>Telp: (021) 2903 0662'
+          },
+          {
+            coords: [-6.32553, 106.85621],
+            popup: '<div class="popup-pt-name">PT GHIBAM JASEENA MANDIRI</div>Jl. Pertengahan No.7 6, RT.6/RW.7, Cijantung, Kec. Ps. Rebo, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13770<br>Email: away.gjm@gmail.com<br>Telp: (021) 9718 1407'
+          },
+          {
+            coords: [-6.15873, 106.62505],
+            popup: '<div class="popup-pt-name">PT KHARISMA SUKSES GEMILANG</div>Jl. Kisaiman 1 No.12, RT.001/RW.004, Koang Jaya, Kec. Karawaci, Kota Tangerang, Banten 15112<br>Email: info@kharismasg.com<br>Telp: (021) 2225 2555'
+          },
+          {
+            coords: [-6.92659, 107.61293],
+            popup: '<div class="popup-pt-name">HOUSE OF CULINARE</div>Jl. Lengkong Besar No.52A, Cikawao, Kec. Lengkong, Kota Bandung, Jawa Barat 40261<br>Email: purchasing_hoc@yahoo.com<br>Telp: (022) 422 4606'
+          },
+          {
+            coords: [-8.63502, 115.18202],
+            popup: '<div class="popup-pt-name">BALI BLESSINDO</div>Jl. Baja Taki IIA No.2, Padangsambian Kaja, Kec. Denpasar Bar., Kota Denpasar, Bali 80117<br>Email: hermanprima@yahoo.com<br>Telp: (0361) 249 490'
+          },
+          {
+            coords: [-8.59341, 116.13026],
+            popup: '<div class="popup-pt-name">BALI BLESSINDO LOMBOK</div>Jl. Brawijaya No.3, Cakranegara Sel., Kec. Cakranegara, Kota Mataram, Nusa Tenggara Bar. 83232<br>Email: kantorlombok@baliblessindo.com<br>Telp: (0370) 7844692'
+          },
+          {
+            coords: [1.47030, 124.91358],
+            popup: '<div class="popup-pt-name">COLTON DISTRIBUSINDO</div>Watutumou, Kec. Kalawat, Kabupaten Minahasa Utara, Sulawesi Utara<br>Email: restiwijaya@gmail.com<br>Telp: 0812 9039 8883'
+          },
+          {
+            coords: [-5.12950, 119.43541],
+            popup: '<div class="popup-pt-name">SEMESTA RASA MAKASSAR</div>Jl. Adipura Raya No.51, Karuwisi Utara, Kec. Panakkukang, Kota Makassar, Sulawesi Selatan 90232<br>Email: farrel.semestarasa@gmail.com<br>Telp: 0811 446 825'
+          },
+          {
+            coords: [-7.26483, 112.74327],
+            popup: '<div class="popup-pt-name">ANAGA RESWARA</div>Jl. Taman Apsari No.11, Embong Kaliasin, Kec. Genteng, Surabaya, Jawa Timur 60271<br>Email: randy_angdjaja@yahoo.com<br>Telp: 0812 3035 382'
+          },
+          {
+            coords: [-7.24222, 112.73001],
+            popup: '<div class="popup-pt-name">MITRA FOOD SERVICE</div>Jl. Kemayoran Baru No.41, Krembangan Sel., Kec. Krembangan, Surabaya, Jawa Timur 60175<br>Email: mitrafood@gmail.com<br>Telp: (031) 3535 567'
+          },
+          {
+            coords: [-2.98338, 104.76481],
+            popup: '<div class="popup-pt-name">ALADIN JAYA PALEMBANG</div>JL. YAYASAN 1 NO.23 RT. 006 RW. 009 SUNGAI BUAH ILIR TIMUR II PALEMBANG<br>Email: plb_gmk@yahoo.co.id<br>Telp: (0711) 317 522'
+          },
+          {
+            coords: [-0.44988, 117.15365],
+            popup: '<div class="popup-pt-name">PT YOVA MAJU SENTOSA</div>JL.MAYJEND SOETOYO NO.88 GN.MALANG BALIKPAPAN.<br>Email: jeffryyova@gmail.com<br>Telp: (0542) 745 255'
+          },
+          {
+            coords: [-6.96448, 110.44008],
+            popup: '<div class="popup-pt-name">PT PANEN LENTERA JAYA</div>Jl. Gajah Raya No.37, Pandean Lamper, Kec. Gayamsari, Kota Semarang, Jawa Tengah 50249<br>Email: panenlentera37@gmail.com<br>Telp: (024) 351 790'
+          },
+          {
+            coords: [3.59122, 98.68203],
+            popup: '<div class="popup-pt-name">SPLASH MEDAN</div>Jl. Timor Dalam Komp. Center Point No.1, Gg. Buntu, Kec. Medan Tim., Kota Medan, Sumatera Utara 20231<br>Email: lyly_code@yahoo.co.id<br>Telp: (061) 451 2518'
+          },
+          {
+            coords: [-5.42236, 105.26182],
+            popup: '<div class="popup-pt-name">PT ALADIN MUTIARA BERKAT</div>Jl. Jend. Sudirman No.60 60A, Tj. Karang, Kec. Tj. Karang Pusat, Kota Bandar Lampung, Lampung 35213<br>Email: ald_jaya_lpg@yahoo.co.id<br>Telp: (0721) 264 614'
+          },
+          {
+            coords: [-0.05399, 109.39188],
+            popup: '<div class="popup-pt-name">PT CENTRAL KAPUAS UTAMA</div>Komp. Pergudangan Prima Lestari, Jl. Trans Kalimantan No.4, Durian, Sungai Ambawang, Kubu Raya Regency, West Kalimantan 78393<br>Email: chairumin@yahoo.com<br>Telp: (0561) 6711 418'
+          },
+          {
+            coords: [-0.82342, 100.37161],
+            popup: '<div class="popup-pt-name">PT INTAN SUKSES INSPIRASI</div>Jl. Pulau Karam No.Kel No.74A, Kp. Pd., Kec. Padang Bar., Kota Padang, Sumatera Barat 25119<br>Email: pt.intansuksesinspirasi@yahoo.com<br>Telp: (0751) 38177'
+          },
+          {
+            coords: [-3.32283, 114.56977],
+            popup: '<div class="popup-pt-name">UTAMA RASA BERJAYA</div>JL. SUTOYO S NO.83 RT.017 / RW.000 TELAGA BIRU, BANJARMASIN BARAT KAL-SEL<br>Email: sherry_blacksmith92@yahoo.com<br>Telp: 0811 5019 92'
+          },
+          {
+            coords: [-7.78339, 110.44729],
+            popup: '<div class="popup-pt-name">PT PANEN LENTERA JAYA</div>Jl. Raya Solo - Yogyakarta, Jagalan, Tegaltirto, Kec. Berbah, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55573<br>Email: panenlentera37@gmail.com<br>Telp: 0857 2895 9409'
+          },
+          {
+            coords: [0.14103, 117.15598],
+            popup: '<div class="popup-pt-name">PT YOVA MAJU SENTOSA</div>JL. PM. NOOR, SEMPAJA SEL. KEC. SAMARINDA UTARA, KOTA SAMARINDA KALIMANTAN TIMUR 75243<br>Email: yovasupermart@yahoo.com<br>Telp: 0812 5610 8889'
+          },
+          {
+            coords: [1.11084, 104.04839],
+            popup: '<div class="popup-pt-name">PT EKAPUTRA DINATA UTAMA</div>MEGA JAYA INDUSTRIAL PARK B16, Kota Batam, Kepulauan Riau 23431<br>Email: ekaputradinatautama@gmail.com<br>Telp: 0811 7098 090'
+          },
+          {
+            coords: [-10.17345, 123.54314],
+            popup: '<div class="popup-pt-name">PT NIAGA AGUNG MAKMUR</div>JL. SILIWANGI NO. 17 KEL. SOLOR KEC. KOTA LAMA KOTA KUPANG NTT 85221<br>Email: akbar@adhendistribution.com<br>Telp: 0821 4136 8823'
+          },
+          {
+            coords: [-2.62661, 140.70065],
+            popup: '<div class="popup-pt-name">PT HARUM PAPUA PERKASA</div>JL. BARU PASAR YOUTEFA BLOK D N0. 03-05 ABEPURA, JAYAPURA<br>Email: purchasing.harumsari@gmail.com<br>Telp: 0811 4868 885'
+          },
+        ];
+
+        // Loop through markers array and add markers to the map
+        markers.forEach(function (markerInfo) {
+          var marker = L.marker(markerInfo.coords, { icon: goldIcon }).addTo(map);
+          marker.bindPopup(markerInfo.popup);
+
+          // Zoom map to marker location when marker is clicked
+          marker.on('click', function () {
+            map.setView(marker.getLatLng(), 13); // Adjust zoom level as needed
+          });
+        });
+
+        // Add CartoDB Positron tile layer
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+          attribution: '&copy; <a href="https://carto.com/">CARTO</a>, &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+          subdomains: 'abcd',
+          maxZoom: 19
+        }).addTo(map);
+      });
+    </script>
+
+
+  </main>
+
+  <footer id="footer" class="footer position-relative">
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <img src="img/logo kmds.png" alt="">
+          </a>
+          <div class="footer-contact pt-3">
+            <p>Jl. Komplek Pergudangan Multi Guna</p>
+            <p>T8 No 16 Alam Sutera, Serpong Utara, Tangerang Selatan</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>021 2235 3388</span></p>
+            <p><strong>Email:</strong> <span>info@kmds.co.id</span></p>
+          </div>
+          <div class="social-links d-flex mt-4">
+            <a href="https://www.instagram.com/kmdsflavors/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.facebook.com/KMDS-Flavors-104862234569570"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.youtube.com/channel/UC06BIfIE2QbC12eOLKxzdIQ"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://wa.me/6287888000085"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Terms of service</a></li>
+            <li><a href="#">Privacy policy</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>E-commerce</h4>
+          <ul>
+            <li><a href="https://www.tokopedia.com/kmdsflavors" target="_blank">Tokopedia</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>2024</span> <span>PT. KurniaMitra Duta Sentosa Tbk</span></p>
+    </div>
+
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!--Floating Button-->
+  <a href="https://wa.me/6287888000085" class="floating-button" target="_blank">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="vendor/php-email-form/validate.js"></script>
+  <script src="vendor/aos/aos.js"></script>
+  <script src="vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
