@@ -233,10 +233,16 @@
   });
 
   /**
- * maps
+ * pop up 
  */
-
-
+  $(document).ready(function () {
+    $('.popup-link').magnificPopup({
+      type: 'image',
+      gallery: {
+        enabled: true
+      }
+    });
+  });
   /**
    * Navmenu Scrollspy
    */
