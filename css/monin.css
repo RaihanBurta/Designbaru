@@ -145,13 +145,13 @@
     }
 
     .modal-content {
-        width: auto;
-        height: auto;
+        width: 500px;
+        height: 500px;
     }
 
     .close {
         font-size: 30px;
-        right: 20px;
+        right: -20px;
     }
 
     .custom-header img {
