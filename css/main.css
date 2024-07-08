@@ -51,7 +51,7 @@
 body {
   color: var(--default-color);
   background-color: var(--background-color);
-  font-family: var(--default-font);
+  font-family: 'Raleway';
 }
 
 a {
@@ -72,7 +72,7 @@ h4,
 h5,
 h6 {
   color: var(--heading-color);
-  font-family: var(--heading-font);
+  font-family: 'Raleway';
 }
 
 /*--------------------------------------------------------------
@@ -187,7 +187,7 @@ h6 {
     color: var(--nav-color);
     padding: 18px 15px;
     font-size: 16px;
-    font-family: var(--nav-font);
+    font-family: 'Raleway';
     font-weight: 400;
     display: flex;
     align-items: center;
@@ -349,7 +349,7 @@ h6 {
   .navmenu a:focus {
     color: var(--nav-dropdown-color);
     padding: 10px 20px;
-    font-family: var(--nav-font);
+    font-family: 'Raleway';
     font-size: 17px;
     font-weight: 500;
     display: flex;
@@ -448,6 +448,7 @@ h6 {
   --background-color: color-mix(in srgb, #A37E2D, transparent 97%);
   color: var(--default-color);
   background-color: var(--background-color);
+  font-family: 'Raleway';
   font-size: 14px;
   padding-bottom: 50px;
   position: relative;
@@ -471,13 +472,13 @@ h6 {
   font-size: 26px;
   font-weight: 700;
   letter-spacing: 1px;
-  font-family: var(--heading-font);
+  font-family: 'Raleway';
   color: var(--heading-color);
 }
 
 .footer .footer-about p {
   font-size: 14px;
-  font-family: var(--heading-font);
+  font-family: 'Raleway';
 }
 
 .footer .social-links a {
@@ -747,7 +748,7 @@ h6 {
 # Global Page Titles & Breadcrumbs
 --------------------------------------------------------------*/
 .page-title {
-  --background-color: color-mix(in srgb, var(--default-color), transparent 96%);
+  --background-color: color-mix(in srgb, var(--default-color), transparent 80%);
   color: var(--default-color);
   background-color: var(--background-color);
   padding: 25px 0;
@@ -876,6 +877,38 @@ section,
   line-height: 56px;
 }
 
+.hero {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  /* Full viewport height */
+  overflow: hidden;
+  /* Prevents overflow */
+}
+
+.hero .hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.hero .hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.hero .hero-bg::before {
+  content: "";
+  background: color-mix(in srgb, var(--background-color), transparent 15%);
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
+
 .hero h1 span {
   color: rgb(224, 127, 24);
 }
@@ -896,7 +929,7 @@ section,
 .hero .btn-get-started {
   color: var(--contrast-color);
   background: var(--accent-color);
-  font-family: var(--heading-font);
+  font-family: 'Raleway';
   font-weight: 500;
   font-size: 15px;
   letter-spacing: 1px;
@@ -954,6 +987,7 @@ section,
     font-size: 13px;
   }
 }
+
 
 /*--------------------------------------------------------------
 # Featured Services Section
@@ -1054,7 +1088,7 @@ section,
 .about .content .read-more {
   background: var(--accent-color);
   color: var(--contrast-color);
-  font-family: var(--heading-font);
+  font-family: 'Raleway';
   font-weight: 500;
   font-size: 16px;
   letter-spacing: 1px;
@@ -1411,7 +1445,7 @@ section,
   color: var(--accent-color);
   font-size: 48px;
   font-weight: 700;
-  font-family: var(--heading-font);
+  font-family: 'Raleway';
   margin-bottom: 0;
 }
 
@@ -1438,7 +1472,7 @@ section,
   border-radius: 5px;
   font-size: 16px;
   font-weight: 500;
-  font-family: var(--heading-font);
+  font-family: 'Raleway';
   transition: 0.3s;
   margin-top: 20px;
   margin-bottom: 6px;
@@ -1619,6 +1653,12 @@ section,
 .faq .section-title img {
   width: 400px;
   height: auto;
+}
+
+.centered-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*--------------------------------------------------------------
@@ -2084,7 +2124,3 @@ html {
   font-weight: bold;
   margin-bottom: 8px;
 }
-
-/*--------------------------------------------------------------
-# slide vertical and horizontal
---------------------------------------------------------------*/
