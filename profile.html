@@ -9,27 +9,23 @@
     <meta name="PT" content="KMDS, Kurnia Mitra Duta Sentosa" />
     <meta name="keywords" content="Monin Syrup, Monin, Sirup Monin, Milklab, Susu Kopi, Susu Almond, Almond Milk" />
 
+    <!--Link-->
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/glide.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css">
+
     <!-- Favicons -->
     <link href="img/landing page/Logo title.png" rel="icon">
-    <link href="img/Logo title.png" rel="apple-touch-icon">
-
-    <!-- link style -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.awesome-markers/2.0.4/leaflet.awesome-markers.css">
-    <script
-        src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.awesome-markers/2.0.4/leaflet.awesome-markers.min.js"></script>
+    <link href="img/landing page/Logo title.png" rel="apple-touch-icon">
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <script src="https://kit.fontawesome.com/ac47935029.js" crossorigin="anonymous"></script>
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/ac47935029.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@6.11.5/dist/ol.css" type="text/css">
-    <script src="https://cdn.jsdelivr.net/npm/ol@6.11.5/dist/ol.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
 
     <!-- Vendor CSS Files -->
@@ -41,7 +37,8 @@
 
     <!-- Main CSS File -->
     <link href="css/main.css" rel="stylesheet">
-    <link href="css/card2.css" rel="stylesheet">
+    <link href="css/company.css" rel="stylesheet">
+
 </head>
 
 <body class="index-page">
@@ -99,30 +96,79 @@
 
     <main class="main">
 
-        <div class="card-container" data-aos="fade-up" style="margin-top: 15%;">
-            <div class="card">
-                <a href="syrup.html">
-                    <img src="img/product/Monin/Monin/monin syrup.png" alt="Monin">
-                </a>
-            </div>
-            <div class="card">
-                <a href="fruitmix.html">
-                    <img src="img/product/Monin/Monin/Monin fm.jpg" alt="Monin">
-                </a>
-            </div>
-            <div class="card">
-                <a href="sauce.html">
-                    <img src="img/product/Monin/Monin/Monin sauce.jpg" alt="Monin">
-                </a>
-            </div>
-            <div class=" card" style="margin-bottom: 100px;">
-                <a href="frappe.html">
-                    <img src="img/product/Monin/Monin/Monin powder.jpg" alt="Monin">
-                </a>
+        <!-- Header Profile Section -->
+        <div class="header-profile">
+            <img src="img/landing page/logo kmds.png" alt="Custom Header Image">
+            <h1>Company Profile</h1>
+            <p>PT KURNIAMITRA DUTA SENTOSA Tbk (PT KMDS Tbk)</p>
+        </div>
+
+        <!-- Sejarah Section -->
+        <div id="history" class="section container">
+            <h2>Sejarah Perusahaan</h2>
+            <img src="img/company/our company/profile/office.jpg" alt="History Image">
+            <p style="text-align: justify;">
+                PT KMDS Tbk, didirikan pada tahun 2000, adalah perusahaan industri makanan dan minuman yang berbasis di
+                Tangerang. Awalnya berfokus pada bidang kontraktor dan alat berat, pendiri Bapak Hengky Wijaya kemudian
+                beralih ke industri ini karena peluang yang berkembang pesat. Kini, PT KMDS Tbk adalah distributor
+                eksklusif berbagai produk berkualitas tinggi, termasuk kopi, teh, coklat, vanilla, Monin syrup dari
+                Prancis, Milk Lab dari Australia, dan produk lainnya dari seluruh dunia. Perusahaan ini tidak hanya
+                menjual produk, tetapi juga menawarkan solusi dan edukasi, serta pelatihan gratis untuk partner bisnis
+                dan pelanggan di seluruh Indonesia. PT KMDS Tbk berkomitmen untuk mengikuti tren terbaru di industri
+                makanan dan minuman dengan berpartisipasi dalam event-event internasional.
+            </p>
+        </div>
+
+        <!-- Visi & Misi Section -->
+        <div id="vision-mission" class="vision-mission container">
+            <div class="row">
+                <div class="col-md-12 col-lg-6">
+                    <h3>Visi</h3>
+                    <p>Menjadi perusahaan terdepan dalam bidang penjualan, pemasaran dan distribusi produk makanan dan
+                        minuman berkualitas.</p>
+                </div>
+                <div class="col-md-12 col-lg-6">
+                    <h3>Misi</h3>
+                    <ol>
+                        <li>Menyediakan produk makanan dan minuman berkualitas yang aman dikonsumsi oleh masyarakat.
+                        </li>
+                        <li>Menjaga kualitas penyimpanan produk hingga siap distribusi dan diterima oleh masyarakat.
+                        </li>
+                        <li>Mendukung perkembangan usaha Hotel, Restoran, dan Kafe terutama dalam peningkatan kualitas
+                            produk makanan dan minumannya.</li>
+                        <li>Membantu menciptakan lapangan pekerjaan dengan mengadakan pelatihan khusus di bidang makanan
+                            dan minuman serta menumbuhkan pengusaha baru.</li>
+                        <li>Memberikan layanan pengiriman dan distribusi secara efisien dan cepat ke seluruh Indonesia.
+                        </li>
+                    </ol>
+                </div>
             </div>
         </div>
 
+        <!-- Kebijakan Mutu Section -->
+        <div id="quality" class="section container">
+            <h2>Kebijakan Mutu</h2>
+            <img src="img/company/our company/profile/retail.jpg" alt="Quality Image">
+            <ol>
+                <li>Mengutamakan produk yang bermutu dan aman.</li>
+                <li>Memberikan pengetahuan yang bermanfaat bagi perkembangan usaha makanan dan minuman.</li>
+                <li>Mengutamakan kepuasan pelanggan.</li>
+                <li>Memberikan layanan purna jual yang maksimal sehingga menciptakan loyalitas pelanggan.</li>
+            </ol>
+        </div>
 
+        <!-- Komitmen Section -->
+        <div id="commitment" class="commitment container">
+            <img src="img/company/our company/profile/iso.jpg" alt="Komitmen Kami">
+            <p style="text-align: justify;">PT KURNIAMITRA DUTA SENTOSA Tbk (PT KMDS Tbk) berkomitmen untuk terus
+                memberikan layanan prima dan solusi
+                yang bernilai tambah kepada seluruh pelanggan dan mitra bisnis, kami terus meningkatkan standarisasi
+                layanan yang mengacu pada International Organization for Standardization (ISO). Dan kami membuktikan ini
+                dengan adanya sertifikasi ISO 9001 : 2015. KMDS layak menerima sertifikasi ISO 9001 : 2015 tersebut
+                karena memenuhi tuntutan 7 (tujuh) prinsip Sistem Manajemen Mutu (SMM) ISO 9001:2015. Di antaranya
+                customer focus, leadership, proses approach, engagement of people, improvement, evidence based decision
+                making, dan relationship management atau dikenal dengan CLPEIER.</p>
+        </div>
 
 
     </main>
@@ -164,14 +210,15 @@
 
     </footer>
 
-    <!-- Scroll Top -->
-    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
-            class="bi bi-arrow-up-short"></i></a>
+    <!-- floating butoon -->
 
-    <!--Floating Button-->
     <a href="https://wa.me/6287888000085" class="floating-button" target="_blank">
         <i class="bi bi-whatsapp"></i>
     </a>
+
+    <!-- Scroll Top --> <!-- jangan di hapus -->
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
 
     <!-- Preloader -->
     <div id="preloader"></div>
@@ -186,7 +233,16 @@
     <!-- Main JS File -->
     <script src="js/main.js"></script>
 
+    <!--link js-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
+    <!--Search-->
+
+    <script>
+
+    </script>
 </body>
 
 </html>
