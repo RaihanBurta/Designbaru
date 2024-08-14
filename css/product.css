@@ -1,0 +1,87 @@
+.custom-header {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.custom-header img {
+    width: 200px;
+    height: auto;
+}
+
+.custom-header h1 {
+    font-family: 'Raleway';
+    font-size: 25px;
+    font-weight: bold;
+    margin: 20px 0 10px;
+}
+
+.custom-header p {
+    font-family: 'Raleway';
+    font-size: 18px;
+    color: #555;
+}
+
+.product-img {
+    width: 100%;
+    height: auto;
+    max-width: 537px;
+    height: auto;
+}
+
+.product-title {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.product-description {
+    font-size: 19px;
+}
+
+.specs-table th,
+.specs-table td {
+    vertical-align: middle;
+    border-right: 1px solid #dee2e6;
+}
+
+.specs-table th:last-child,
+.specs-table td:last-child {
+    border-right: 0;
+}
+
+.specs-table td:first-child {
+    text-align: left;
+}
+
+.specs-table td:last-child {
+    text-align: left;
+}
+
+/* Warna untuk item pagination normal */
+.pagination .page-item .page-link {
+    color: #000000;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    padding: 10px 15px;
+    font-size: 1.01em;
+}
+
+/* Warna untuk item pagination saat dihover */
+.pagination .page-item .page-link:hover {
+    color: #fff;
+    background-color: #d8e61b;
+    border-color: #dee2e6;
+}
+
+/* Warna untuk item pagination aktif */
+.pagination .page-item.active .page-link {
+    color: #fff;
+    background-color: #edab1d;
+    border-color: #dee2e6;
+}
+
+/* Warna untuk item pagination nonaktif */
+.pagination .page-item.disabled .page-link {
+    color: #000000;
+    background-color: #dee2e6;
+    border-color: #dee2e6;
+}
