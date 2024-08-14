@@ -13,7 +13,6 @@
     box-shadow: 30px 30px 60px #dcdbdb, -30px -30px 60px #ffffff;
     display: flex;
     flex-direction: column;
-    /* Menyusun gambar dan teks secara vertikal */
     align-items: center;
     margin: 40px;
     overflow: hidden;
@@ -110,26 +109,76 @@
 }
 
 .close {
-    color: rgb(0, 0, 0);
+    color: #fff;
     position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 35px;
+    top: -55px;
+    right: 80px;
+    z-index: 2;
+    font-size: 30px;
     font-weight: bold;
     transition: 0.3s;
+    background-color: #ff5e5e;
+    border: 2px solid #ff5e5e;
+    border-radius: 60%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
 }
 
 .close:hover,
 .close:focus {
-    color: #bbb;
+    background-color: #ff7878;
+    /* Warna latar belakang saat dihover */
+    border-color: #ff7878;
+    color: #fff;
     text-decoration: none;
     cursor: pointer;
 }
 
+/* Style untuk pencarian */
+.desktop-search {
+
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    /* Awalnya disembunyikan untuk mobile */
+}
+
+.desktop-search input[type="text"] {
+    padding: 8px 16px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 16px;
+}
+
+.desktop-search button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.mobile-search {
+    display: none;
+    /* Awalnya disembunyikan untuk desktop */
+    cursor: pointer;
+    position: absolute;
+    top: 25px;
+    right: 30px;
+}
+
 /* Responsiveness */
 @media (max-width: 610px) {
+
     .card {
-        width: 610px;
+        width: 240px;
         margin: 25px;
     }
 
@@ -145,17 +194,20 @@
     }
 
     .modal-content {
-        width: 500px;
-        height: 500px;
+        width: 320px;
+        height: 320px;
     }
 
     .close {
         font-size: 30px;
-        right: -20px;
+        top: 40px;
+        right: 10px;
+        width: 30px;
+        height: 30px;
     }
 
     .custom-header img {
-        width: 80%;
+        width: 50%;
     }
 
     .custom-header h1 {
@@ -165,4 +217,5 @@
     .custom-header p {
         font-size: 16px;
     }
+
 }
