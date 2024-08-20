@@ -1,0 +1,153 @@
+.custom-header {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.custom-header img {
+    width: 230px;
+    height: auto;
+}
+
+.custom-header h1 {
+    font-family: 'Montserrat';
+    font-size: 25px;
+    font-weight: bold;
+    margin: 20px 0 10px;
+}
+
+.custom-header p {
+    font-family: 'Montserrat';
+    font-size: 18px;
+    color: #555;
+}
+
+body {
+    background-color: #f8f9fa;
+}
+
+.product-card {
+    max-width: 330px;
+    margin: auto;
+    overflow: hidden;
+    transition: transform 0.3s ease, background-image 0.3s ease;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+.product-img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.product-img {
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 15px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.product-info h5 {
+    font-weight: bold;
+}
+
+.product-info p {
+    color: #6c757d;
+}
+
+.product-separator {
+    height: 2px;
+    background-color: #9acb07c0;
+    width: 50px;
+    margin: 15px auto;
+}
+
+.product-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.product-card:hover::before {
+    opacity: 0.5;
+}
+
+/* Warna untuk item pagination normal */
+.pagination .page-item .page-link {
+    color: #000000;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    padding: 10px 15px;
+    font-size: 1.01em;
+}
+
+/* Warna untuk item pagination saat dihover */
+.pagination .page-item .page-link:hover {
+    color: #fff;
+    background-color: #d8e61b;
+    border-color: #dee2e6;
+}
+
+/* Warna untuk item pagination aktif */
+.pagination .page-item.active .page-link {
+    color: #fff;
+    background-color: #edab1d;
+    border-color: #dee2e6;
+}
+
+/* Warna untuk item pagination nonaktif */
+.pagination .page-item.disabled .page-link {
+    color: #000000;
+    background-color: #dee2e6;
+    border-color: #dee2e6;
+}
+
+@media (max-width: 767.98px) {
+    .product-card {
+        width: 100%;
+    }
+
+    .product-img-container {
+        height: 350px;
+        /* Sesuaikan tinggi gambar untuk mobile */
+    }
+
+    .product-info {
+        padding: 10px;
+    }
+
+    .product-separator {
+        width: 30px;
+        margin: 10px auto;
+    }
+}
