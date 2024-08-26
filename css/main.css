@@ -162,6 +162,7 @@ h6 {
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
+
 /* Desktop Navigation */
 @media (min-width: 1200px) {
   .navmenu {
@@ -193,6 +194,15 @@ h6 {
     white-space: nowrap;
     transition: 0.3s;
     text-shadow: 1px 1px 2px rgb(255, 255, 255);
+    border-bottom: none;
+    /* Tidak ada garis bawah di desktop */
+  }
+
+  .navmenu a:hover,
+  .navmenu .active,
+  .navmenu .active:focus {
+    color: #daa520;
+    /* Warna teks berubah saat di-hover atau aktif */
   }
 
   .navmenu a i,
@@ -205,12 +215,6 @@ h6 {
 
   .navmenu li:last-child a {
     padding-right: 0;
-  }
-
-  .navmenu li:hover>a,
-  .navmenu .active,
-  .navmenu .active:focus {
-    color: #daa520;
   }
 
   .navmenu .dropdown ul {
@@ -238,76 +242,21 @@ h6 {
     font-size: 15px;
     text-transform: none;
     color: var(--nav-dropdown-color);
+    border-bottom: none;
+    /* Tidak ada garis bawah di desktop */
+    transition: border-bottom 0.3s;
+  }
+
+  .navmenu .dropdown ul a:hover {
+    color: #daa520;
+    /* Warna teks berubah saat di-hover */
   }
 
   .navmenu .dropdown ul a i {
     font-size: 12px;
   }
 
-  .navmenu .dropdown ul a:hover,
-  .navmenu .dropdown ul .active:hover,
-  .navmenu .dropdown ul li:hover>a {
-    color: var(--nav-dropdown-hover-color);
-  }
-
   .navmenu .dropdown:hover>ul {
-    opacity: 1;
-    top: 100%;
-    visibility: visible;
-  }
-
-  .navmenu .dropdown .dropdown ul {
-    top: 0;
-    left: -90%;
-    visibility: hidden;
-  }
-
-  .navmenu .dropdown .dropdown:hover>ul {
-    opacity: 1;
-    top: 0;
-    left: -100%;
-    visibility: visible;
-  }
-
-  .navmenu .megamenu {
-    position: static;
-  }
-
-  .navmenu .megamenu ul {
-    margin: 0;
-    padding: 10px;
-    background: var(--nav-dropdown-background-color);
-    box-shadow: 0px 0px 20px color-mix(in srgb, var(--default-color), transparent 90%);
-    position: absolute;
-    top: 130%;
-    left: 0;
-    right: 0;
-    visibility: hidden;
-    opacity: 0;
-    display: flex;
-    transition: 0.3s;
-    border-radius: 4px;
-    z-index: 99;
-  }
-
-  .navmenu .megamenu ul li {
-    flex: 1;
-  }
-
-  .navmenu .megamenu ul li a,
-  .navmenu .megamenu ul li:hover>a {
-    padding: 10px 20px;
-    font-size: 15px;
-    color: var(--nav-dropdown-color);
-  }
-
-  .navmenu .megamenu ul li a:hover,
-  .navmenu .megamenu ul li .active,
-  .navmenu .megamenu ul li .active:hover {
-    color: var(--nav-dropdown-hover-color);
-  }
-
-  .navmenu .megamenu:hover>ul {
     opacity: 1;
     top: 100%;
     visibility: visible;
@@ -324,13 +273,11 @@ h6 {
     cursor: pointer;
     transition: color 0.3s;
     order: 1;
-    /* Memastikan ikon menu di sebelah kiri */
     margin-left: 10px;
   }
 
   .header .logo {
     order: 2;
-    /* Logo di tengah */
     text-align: center;
     flex-grow: 1;
   }
@@ -342,9 +289,7 @@ h6 {
     cursor: pointer;
     transition: color 0.3s;
     order: 3;
-    /* Memastikan ikon pencarian berada di sebelah kanan */
     margin-right: 10px;
-    /* Tambahkan margin kanan untuk memberikan ruang */
   }
 
   .navmenu {
@@ -382,7 +327,10 @@ h6 {
   .navmenu a,
   .navmenu a:focus {
     color: #000000;
-    padding: 10px 20px;
+    padding: 15px 20px;
+    /* Menambah padding atas dan bawah untuk ruang */
+    padding-bottom: 15px;
+    /* Konsisten padding bawah */
     font-family: 'Montserrat';
     font-size: 16px;
     font-weight: 600;
@@ -391,6 +339,26 @@ h6 {
     justify-content: space-between;
     white-space: nowrap;
     transition: 0.3s;
+    position: relative;
+  }
+
+  .navmenu>ul>li>a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    /* Konsisten dengan tepi bawah */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 88%;
+    /* Panjang garis seragam */
+    height: 3px;
+    /* Konsisten ketebalan garis */
+    background-color: #dfb356;
+  }
+
+  .navmenu a:hover {
+    color: #dfb356;
+    /* Warna teks berubah saat di-hover di mobile */
   }
 
   .navmenu a i,
@@ -408,23 +376,9 @@ h6 {
     background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
   }
 
-  .navmenu a i:hover,
-  .navmenu a:focus i:hover {
+  .navmenu a i:hover {
     background-color: var(--accent-color);
     color: var(--contrast-color);
-  }
-
-  .navmenu a:hover,
-  .navmenu .active,
-  .navmenu .active:focus {
-    color: var(--nav-dropdown-hover-color);
-  }
-
-  .navmenu .active i,
-  .navmenu .active:focus i {
-    background-color: var(--accent-color);
-    color: var(--contrast-color);
-    transform: rotate(180deg);
   }
 
   .navmenu .dropdown ul {
@@ -484,7 +438,7 @@ h6 {
 }
 
 .header .bi-search:hover {
-  color: #daa520;
+  color: #dfb356;
 }
 
 .header .bi-search {
@@ -752,8 +706,7 @@ h6 {
 
 #preloader img {
   position: absolute;
-  width: 100px;
-  /* Ukuran disesuaikan */
+  width: 130px;
   height: auto;
   opacity: 0;
 }
@@ -763,7 +716,8 @@ h6 {
 }
 
 #leaf1 {
-  top: -60px;
+  top: -50px;
+  left: -20px;
   animation: fadeIn 1s ease-out 0.5s forwards;
 }
 
@@ -781,7 +735,7 @@ h6 {
 
 #leaf4 {
   bottom: -60px;
-  left: -30px;
+  left: -20px;
   animation: fadeIn 1s ease-out 2s forwards;
 }
 
