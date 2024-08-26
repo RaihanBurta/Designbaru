@@ -137,6 +137,12 @@ body {
         width: 100%;
     }
 
+    .product-img {
+        width: 320px;
+        height: auto;
+        object-fit: cover;
+    }
+
     .product-img-container {
         height: 350px;
         /* Sesuaikan tinggi gambar untuk mobile */
