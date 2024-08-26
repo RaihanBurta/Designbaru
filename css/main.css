@@ -329,8 +329,7 @@ h6 {
     color: #000000;
     padding: 15px 20px;
     /* Menambah padding atas dan bawah untuk ruang */
-    padding-bottom: 15px;
-    /* Konsisten padding bawah */
+    padding-bottom: 25px;
     font-family: 'Montserrat';
     font-size: 16px;
     font-weight: 600;
@@ -346,13 +345,10 @@ h6 {
     content: "";
     position: absolute;
     bottom: 0;
-    /* Konsisten dengan tepi bawah */
     left: 50%;
     transform: translateX(-50%);
     width: 88%;
-    /* Panjang garis seragam */
     height: 3px;
-    /* Konsisten ketebalan garis */
     background-color: #dfb356;
   }
 
