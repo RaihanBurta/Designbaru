@@ -160,8 +160,8 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# Navigation Menu
---------------------------------------------------------------*/
+  # Navigation Menu
+  --------------------------------------------------------------*/
 
 /* Desktop Navigation */
 @media (min-width: 1200px) {
@@ -302,6 +302,7 @@ h6 {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
   }
 
   .header .logo {
@@ -313,11 +314,11 @@ h6 {
   .navmenu ul {
     display: none;
     position: absolute;
-    inset: 60px 20px 20px 20px;
-    padding: 10px 0;
+    inset: 0px 70px 0px 0px;
+    padding: 60px 0;
     margin: 0;
     border-radius: 6px;
-    background-color: var(--nav-dropdown-background-color);
+    background-color: #dfb356;
     overflow-y: auto;
     transition: 0.3s;
     z-index: 9998;
@@ -326,9 +327,8 @@ h6 {
 
   .navmenu a,
   .navmenu a:focus {
-    color: #000000;
+    color: #ffffff;
     padding: 15px 20px;
-    /* Menambah padding atas dan bawah untuk ruang */
     padding-bottom: 25px;
     font-family: 'Montserrat';
     font-size: 16px;
@@ -348,19 +348,18 @@ h6 {
     left: 50%;
     transform: translateX(-50%);
     width: 88%;
-    height: 3px;
-    background-color: #dfb356;
+    height: 0.1px;
+    background-color: #ffffff;
   }
 
   .navmenu a:hover {
-    color: #dfb356;
-    /* Warna teks berubah saat di-hover di mobile */
+    color: #ffffff;
   }
 
   .navmenu a i,
   .navmenu a:focus i {
-    font-size: 12px;
-    line-height: 0;
+    font-size: 15px;
+    line-height: 3;
     margin-left: 5px;
     width: 30px;
     height: 30px;
@@ -383,7 +382,7 @@ h6 {
     z-index: 99;
     padding: 10px 0;
     margin: 10px 20px;
-    background-color: var(--nav-dropdown-background-color);
+    background-color: #ffffff;
     border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
     transition: all 0.5s ease-in-out;
     box-shadow: none;
@@ -402,12 +401,13 @@ h6 {
     overflow: hidden;
   }
 
+  /* tombol close */
   .mobile-nav-active .mobile-nav-toggle {
-    color: #fff;
+    color: #ffffff;
     position: absolute;
     font-size: 32px;
     top: 15px;
-    right: 15px;
+    left: 0px;
     margin-right: 0;
     z-index: 9999;
   }
@@ -443,27 +443,57 @@ h6 {
   top: 50%;
 }
 
+/* Styling untuk ikon tas */
+.header .bi-bag {
+  font-size: 1.2rem;
+  color: #000000;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.header .bi-bag:hover {
+  color: #dfb356;
+}
+
+.header .bi-bag {
+  margin-left: 20px;
+  position: relative;
+  top: 50%;
+}
+
+/* Penyesuaian khusus untuk ikon pencarian dan tas di tampilan mobile */
 @media (max-width: 991px) {
   .header .container-xl {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+  }
+
+  .header .mobile-nav-toggle {
+    order: 1;
+    margin-left: 10px;
+  }
+
+  .header .logo {
+    order: 2;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .header .bi-search {
     order: 3;
-    margin-left: 0;
+    margin-left: auto;
+    margin-right: 10px;
   }
 
-  .header .logo {
-    order: 1;
-    margin: 0 auto;
-  }
-
-  .header .mobile-nav-toggle {
-    order: 2;
+  .header .bi-bag {
+    order: 4;
+    margin-right: 10px;
   }
 }
+
 
 
 
@@ -702,37 +732,13 @@ h6 {
 
 #preloader img {
   position: absolute;
-  width: 130px;
+  width: 100px;
   height: auto;
   opacity: 0;
 }
 
 #center {
   animation: fadeIn 1s ease-out forwards;
-}
-
-#leaf1 {
-  top: -50px;
-  left: -20px;
-  animation: fadeIn 1s ease-out 0.5s forwards;
-}
-
-#leaf2 {
-  top: -30px;
-  right: -60px;
-  animation: fadeIn 1s ease-out 1s forwards;
-}
-
-#leaf3 {
-  right: -60px;
-  bottom: -30px;
-  animation: fadeIn 1s ease-out 1.5s forwards;
-}
-
-#leaf4 {
-  bottom: -60px;
-  left: -20px;
-  animation: fadeIn 1s ease-out 2s forwards;
 }
 
 @keyframes fadeIn {
