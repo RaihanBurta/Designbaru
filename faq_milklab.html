@@ -20,6 +20,9 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.awesome-markers/2.0.4/leaflet.awesome-markers.css">
   <script
     src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.awesome-markers/2.0.4/leaflet.awesome-markers.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -90,13 +93,46 @@
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
-
-      <i class="bi bi-search"></i>
-      <a href="https://tokopedia.link/QYt1ORDSULb" class="bi bi-bag" target="_blank"></a>
+      <i class="bi bi-bag" data-toggle="modal" data-target="#ecommercePopupModal" style="cursor: pointer;"></i>
     </div>
   </header>
 
+
+
   <main class="main">
+
+    <div class="modal fade" id="ecommercePopupModal" tabindex="-1" role="dialog"
+      aria-labelledby="ecommercePopupModalLabel" aria-hidden="true">
+      <div class="modal-dialog custom-modal-dialog" role="document">
+        <div class="modal-content custom-modal-content">
+          <div class="modal-body custom-modal-body">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <div class="ecom-list">
+              <div class="ecom-item">
+                <img src="img/landing page/Tokopedia.png" alt="E-commerce 1" class="img-fluid">
+                <a href="https://tokopedia.link/QYt1ORDSULb" target="_blank" class="ml-3">Tokopedia</a>
+              </div>
+              <div class="ecom-item">
+                <img src="img/landing page/tiktok.png" alt="E-commerce 2" class="img-fluid">
+                <a href="https://www.tiktok.com/@kmds.officialstore?_t=8pF8mi2pVlg&_r=1" target="_blank"
+                  class="ml-3">Tiktok Shop</a>
+              </div>
+              <div class="ecom-item">
+                <img src="img/landing page/shopee.png" alt="E-commerce 3" class="img-fluid">
+                <a href="https://shopee.co.id/kmds.pik?entryPoint=ShopBySearch&searchKeyword=kmds" target="_blank"
+                  class="ml-3">Shopee</a>
+              </div>
+              <div class="ecom-item">
+                <img src="img/landing page/blibli.png" alt="E-commerce 4" class="img-fluid">
+                <a href="https://blibli.onelink.me/GNtk/bk6s2u1z" target="_blank" class="ml-3">Blibli</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <section id="services" class="services section" style="margin-top: 60px;">
 
@@ -251,12 +287,6 @@
             <a href="https://www.facebook.com/KMDS-Flavors-104862234569570"><i class="fa-brands fa-facebook"></i></a>
             <a href="https://www.youtube.com/channel/UC06BIfIE2QbC12eOLKxzdIQ"><i class="fa-brands fa-youtube"></i></a>
             <a href="https://wa.me/6287888000085"><i class="fa-brands fa-whatsapp"></i></a>
-            <a href="https://shopee.co.id/kmds.pik?entryPoint=ShopBySearch&searchKeyword=kmds" target="_blank"><img
-                src="img/landing page/shopee.png" style="width: auto; height: 30px;" alt="Shoppe Logo"></a>
-            <a href="https://www.tiktok.com/@kmds.officialstore?_t=8pF8mi2pVlg&_r=1" target="_blank"><img
-                src="img/landing page/tiktok.png" style="width: auto; height: 24px;" alt="tiktok Logo"></a>
-            <a href="https://blibli.onelink.me/GNtk/bk6s2u1z" target="_blank"><img src="img/landing page/blibli.png"
-                style="width: auto; height: 30px;" alt="blibi Logo"></a>
           </div>
         </div>
 
