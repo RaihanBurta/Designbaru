@@ -347,7 +347,8 @@ h6 {
     left: 50%;
     transform: translateX(-50%);
     width: 88%;
-    height: 0.1px;
+    height: 1px;
+    /* Menggunakan height 1px untuk konsistensi di semua perangkat */
     background-color: #ffffff;
   }
 
@@ -492,8 +493,6 @@ h6 {
     margin-right: 10px;
   }
 }
-
-
 
 
 /*--------------------------------------------------------------
