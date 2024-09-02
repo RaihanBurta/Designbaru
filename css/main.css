@@ -174,11 +174,14 @@ h6 {
     padding: 0;
     display: flex;
     list-style: none;
+    /* Remove default bullets */
     align-items: center;
   }
 
   .navmenu li {
     position: relative;
+    list-style: none;
+    /* Ensure list-style is none for each list item */
   }
 
   .navmenu a,
@@ -322,6 +325,14 @@ h6 {
     transition: 0.3s;
     z-index: 9998;
     box-shadow: 0px 0px 30px color-mix(in srgb, var(--default-color), transparent 90%);
+    list-style: none;
+    /* Ensure list-style is none for mobile */
+  }
+
+  .navmenu li {
+    position: relative;
+    list-style: none;
+    /* Ensure list-style is none for each list item */
   }
 
   .navmenu a,
@@ -347,8 +358,7 @@ h6 {
     left: 50%;
     transform: translateX(-50%);
     width: 88%;
-    height: 1px;
-    /* Menggunakan height 1px untuk konsistensi di semua perangkat */
+    height: 0.2px;
     background-color: #ffffff;
   }
 
