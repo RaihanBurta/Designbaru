@@ -1,0 +1,136 @@
+.custom-header {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.custom-header img {
+    width: 230px;
+    height: auto;
+}
+
+.custom-header h1 {
+    font-family: 'Montserrat';
+    font-size: 25px;
+    font-weight: bold;
+    margin: 20px 0 10px;
+}
+
+.custom-header p {
+    font-family: 'Montserrat';
+    font-size: 18px;
+    color: #555;
+}
+
+body {
+    background-color: #ffffff;
+}
+
+.lavazza-container {
+    padding: 50px;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.lavazza-product-image {
+    width: 78%;
+    border-radius: 10px;
+}
+
+
+.lavazza-small-text {
+    font-size: 0.9rem;
+    color: #051432;
+    font-weight: bolder;
+    font-family: 'graphik';
+}
+
+.lavazza-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #051432;
+    font-family: 'graphik';
+}
+
+.lavazza-description {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    font-weight: 400;
+    color: #051432;
+    font-family: 'graphik';
+    text-align: justify;
+}
+
+/* Styling untuk elemen 250 g dengan ikon */
+.lavazza-weight-box {
+    display: inline-flex;
+    align-items: center;
+    border: 2px solid #051432;
+    padding: 5px 10px;
+    border-radius: 50px;
+}
+
+.lavazza-weight-icon {
+    height: 25px;
+    margin-right: 2px;
+}
+
+.lavazza-weight-text {
+    font-size: 1.3rem;
+    color: #182c54;
+    font-weight: 550;
+    font-family: 'graphik';
+}
+
+.lavazza-subtitle {
+    font-size: 1.4rem;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: #051432;
+    font-family: 'FreelandCustom';
+    letter-spacing: 0.05rem;
+}
+
+.lavazza-taste-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-family: 'graphik';
+    color: #051432;
+}
+
+.lavazza-taste-description {
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-family: 'graphik';
+    color: #051432;
+}
+
+.lavazza-profile-item {
+    margin-bottom: 15px;
+    color: #051432;
+    font-family: 'graphik';
+}
+
+.lavazza-profile-item p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+    color: #051432;
+    font-family: 'graphik';
+}
+
+.lavazza-profile-item p strong {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+@font-face {
+    font-family: 'FreelandCustom';
+    src: url('../img/product/Lavazza/font/Freeland.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
