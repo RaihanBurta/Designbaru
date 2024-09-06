@@ -138,19 +138,17 @@ body {
 @media (max-width: 768px) {
     .lavazza-container {
         padding: 20px;
-        margin-top: 20px;
-        margin-bottom: 20px;
+        margin-top: 50px;
+        margin-bottom: 50px;
     }
 
     .lavazza-product-image {
         width: 90%;
-        /* Lebih besar untuk tampilan mobile */
         margin-bottom: 20px;
     }
 
     .lavazza-title {
         font-size: 2rem;
-        /* Sesuaikan ukuran font untuk mobile */
     }
 
     .lavazza-description {
@@ -164,12 +162,10 @@ body {
 
     .lavazza-weight-text {
         font-size: 1.1rem;
-        /* Ukuran font lebih kecil untuk mobile */
     }
 
     .lavazza-subtitle {
         font-size: 1.2rem;
-        /* Sesuaikan ukuran subtitle */
     }
 
     .lavazza-taste-title,
