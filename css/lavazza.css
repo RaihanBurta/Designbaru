@@ -39,7 +39,6 @@ body {
     border-radius: 10px;
 }
 
-
 .lavazza-small-text {
     font-size: 0.9rem;
     color: #051432;
@@ -133,4 +132,49 @@ body {
     src: url('../img/product/Lavazza/font/Freeland.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
+}
+
+/* Media Query untuk responsif di layar mobile */
+@media (max-width: 768px) {
+    .lavazza-container {
+        padding: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .lavazza-product-image {
+        width: 90%;
+        /* Lebih besar untuk tampilan mobile */
+        margin-bottom: 20px;
+    }
+
+    .lavazza-title {
+        font-size: 2rem;
+        /* Sesuaikan ukuran font untuk mobile */
+    }
+
+    .lavazza-description {
+        font-size: 14px;
+        text-align: justify;
+    }
+
+    .lavazza-weight-box {
+        padding: 5px 8px;
+    }
+
+    .lavazza-weight-text {
+        font-size: 1.1rem;
+        /* Ukuran font lebih kecil untuk mobile */
+    }
+
+    .lavazza-subtitle {
+        font-size: 1.2rem;
+        /* Sesuaikan ukuran subtitle */
+    }
+
+    .lavazza-taste-title,
+    .lavazza-taste-description,
+    .lavazza-profile-item p {
+        font-size: 14px;
+    }
 }
