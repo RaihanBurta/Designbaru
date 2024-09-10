@@ -1,0 +1,222 @@
+/* Style untuk kartu */
+.card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 5%;
+}
+
+.card {
+    width: 270px;
+    border-top-left-radius: 125px;
+    border-top-right-radius: 125px;
+    background: #ffffff;
+    box-shadow: 30px 30px 60px #dcdbdb, -30px -30px 60px #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.card img {
+    width: 110%;
+    height: auto;
+    object-fit: contain;
+}
+
+.card-body {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+}
+
+.card-text {
+    font-family: 'Montserrat';
+    font-size: 18px;
+    color: #333;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+
+/* Style untuk header kustom */
+.custom-header {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.custom-header img {
+    width: 250px;
+    height: auto;
+}
+
+.custom-header h1 {
+    font-family: 'Montserrat';
+    font-size: 25px;
+    font-weight: bold;
+    margin: 20px 0 10px;
+}
+
+.custom-header p {
+    font-family: 'Montserrat';
+    font-size: 18px;
+    color: #555;
+}
+
+/* Style untuk modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 190px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: color-mix(in srgb, #ffffff, transparent 5%);
+}
+
+.modal-content-wrapper {
+    position: relative;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 700px;
+    max-height: 80%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.modal-content {
+    display: block;
+    width: 610px;
+    height: 610px;
+    object-fit: contain;
+}
+
+.close {
+    color: #fff;
+    position: absolute;
+    top: -55px;
+    right: 80px;
+    z-index: 2;
+    font-size: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+    background-color: #ff5e5e;
+    border: 2px solid #ff5e5e;
+    border-radius: 60%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    background-color: #ff7878;
+    /* Warna latar belakang saat dihover */
+    border-color: #ff7878;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Style untuk pencarian */
+.desktop-search {
+
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    /* Awalnya disembunyikan untuk mobile */
+}
+
+.desktop-search input[type="text"] {
+    padding: 8px 16px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 16px;
+}
+
+.desktop-search button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.mobile-search {
+    display: none;
+    /* Awalnya disembunyikan untuk desktop */
+    cursor: pointer;
+    position: absolute;
+    top: 25px;
+    right: 30px;
+}
+
+/* Responsiveness */
+@media (max-width: 610px) {
+
+    .card {
+        width: 240px;
+        margin: 25px;
+    }
+
+    .card img {
+        width: 120%;
+        height: auto;
+    }
+
+    .modal-content-wrapper {
+        width: 90%;
+        max-width: 90%;
+        max-height: 90%;
+    }
+
+    .modal-content {
+        width: 420px;
+        height: 420px;
+    }
+
+    .close {
+        font-size: 30px;
+        top: 40px;
+        right: 10px;
+        width: 30px;
+        height: 30px;
+    }
+
+    .custom-header img {
+        width: 50%;
+    }
+
+    .custom-header h1 {
+        font-size: 20px;
+    }
+
+    .custom-header p {
+        font-size: 16px;
+    }
+
+}
