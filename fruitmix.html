@@ -268,10 +268,10 @@
 
 
         <!-- Modal (jangan di apus buat popup) -->
-        <div id="myModal" class="modal">
-            <div class="modal-content-wrapper">
-                <span class="close">&times;</span>
-                <img class="modal-content" id="img01">
+        <div id="myModal" class="custom-modal-img">
+            <div class="custom-modal-content-wrapper">
+                <span class="custom-close">&times;</span>
+                <img class="custom-modal-content" id="img01">
             </div>
         </div>
 
@@ -337,16 +337,12 @@
     <script src="js/main.js"></script>
 
     <script>
-        // Mendapatkan elemen modal
         var modal = document.getElementById('myModal');
 
-        // Mendapatkan gambar modal
         var modalImg = document.getElementById("img01");
 
-        // Mendapatkan semua elemen kartu
         var cards = document.getElementsByClassName('card');
 
-        // Menambahkan event listener untuk setiap kartu
         for (var i = 0; i < cards.length; i++) {
             cards[i].onclick = function () {
                 modal.style.display = "block";
@@ -355,11 +351,16 @@
             }
         }
 
-        // Mendapatkan elemen penutup dan menambahkan fungsi klik untuk menutup modal
-        var span = document.getElementsByClassName("close")[0];
+        var span = document.getElementsByClassName("custom-close")[0];
 
         span.onclick = function () {
             modal.style.display = "none";
+        }
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
         }
     </script>
 
