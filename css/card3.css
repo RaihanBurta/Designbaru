@@ -1,0 +1,139 @@
+/* Style untuk kartu */
+.card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 5%;
+}
+
+.card {
+    width: 266px;
+    height: 430px;
+    box-shadow: 10px 10px 30px #dcdbdb, -10px -10px 3 0px #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s;
+    border-radius: 7px;
+}
+
+.card img {
+    width: 265px;
+    height: auto;
+    object-fit: contain;
+    transition: opacity 0.3s ease;
+}
+
+.card-body {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+}
+
+.card-text {
+    font-family: 'Source Sans 3';
+    font-size: 20px;
+    color: #333;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card .overlay {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: color-mix(in srgb, #D4AF37, transparent 15%);
+    opacity: 0;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2rem;
+    transition: opacity 0.3s ease;
+}
+
+.card:hover .overlay {
+    opacity: 0.9;
+}
+
+.download-icon {
+    cursor: pointer;
+}
+
+.card a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+
+/* Style untuk header kustom */
+.custom-header {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.custom-header img {
+    width: 250px;
+    height: auto;
+}
+
+.custom-header h1 {
+    font-family: 'astrovans';
+    font-size: 30px;
+    font-weight: 600;
+    margin: 20px 0 10px;
+}
+
+.custom-header p {
+    font-family: 'Source Sans 3';
+    font-size: 18px;
+    color: #555;
+}
+
+/* Responsiveness */
+@media (max-width: 610px) {
+    .card {
+        width: 250px;
+        height: 400px;
+        margin: 25px;
+    }
+
+    .card img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .custom-header img {
+        width: 50%;
+    }
+
+    .custom-header h1 {
+        font-size: 30px;
+    }
+
+    .custom-header p {
+        font-size: 16px;
+    }
+}
+
+/*--------------------------------------------------------------
+# font
+--------------------------------------------------------------*/
+@font-face {
+    font-family: 'astrovans';
+    src: url('../img/font/Astrovans.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&display=swap');
