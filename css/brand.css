@@ -9,15 +9,15 @@
 }
 
 .custom-header h1 {
-    font-family: 'astrovans';
-    font-size: 22px;
+    font-family: 'din';
+    font-size: 30px;
     font-weight: 600;
     margin: 20px 0 10px;
 }
 
 .custom-header p {
-    font-family: 'Source Sans 3';
-    font-size: 18px;
+    font-family: 'verlag';
+    font-size: 22px;
     color: #555;
 }
 
@@ -70,12 +70,14 @@ body {
 
 .product-info h5 {
     font-weight: bold;
-    font-family: astrovans;
+    font-family: 'din';
+    font-size: 24px;
 }
 
 .product-info p {
     color: #6c757d;
-    font-family: Source Sans 3;
+    font-family: 'verlag';
+    font-size: 18px;
 }
 
 .product-separator {
@@ -165,6 +167,20 @@ body {
 @font-face {
     font-family: 'astrovans';
     src: url('../img/font/Astrovans.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'din';
+    src: url('../img/product/Lavazza/font/DIN.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'verlag';
+    src: url('../img/product/Lavazza/font/Verlagb.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
