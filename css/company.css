@@ -405,13 +405,13 @@ body {
 
 .header-profile img {
     width: 100%;
-    max-width: 250px;
+    max-width: 220px;
     height: auto;
 }
 
 .header-profile h1 {
     font-family: 'astrovans';
-    font-size: 2rem;
+    font-size: 1.7rem;
     margin: 20px 0 10px;
     text-transform: uppercase;
 }
@@ -491,6 +491,12 @@ body {
 @media (max-width: 768px) {
     .vision-mission .col-md-12 {
         margin-bottom: 30px;
+    }
+
+    .header-profile img {
+        width: 100%;
+        max-width: 150px;
+        height: auto;
     }
 }
 
